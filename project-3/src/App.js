@@ -1,7 +1,10 @@
+import React from "react";
+import JumbotronThing from "./components/Jumbotron";
+
 function App() {
   return (
     <div className="App">
-      <h1>Hi Mom</h1>
+      <JumbotronThing title="Bobbie" />
     </div>
   );
 }
