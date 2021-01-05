@@ -29,7 +29,7 @@ function Navbar(){
         <div className="navbar-container">
 
             {/* //link is like an anchor tab this is the logo of the navbar */}
-            <Link to="/" className="navbar-logo">
+            <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
                 GameDar <i className="fas fa-microscope"/></Link>
 
                 <div className="menu-icon" onClick={handleClick}>
