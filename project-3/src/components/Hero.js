@@ -1,7 +1,7 @@
 import React from 'react'
 import {Button} from './Button'
 import './Hero.css'
-import Iframe from 'react-iframe'
+
 function HeroSection (){
     return(
         <div className='hero-container'>
