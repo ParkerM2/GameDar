@@ -1,7 +1,16 @@
 .ECarousel{
     font-family: sans-serif;
-    display: flex;
+    /* display: flex; */
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    /* height: 100vh; */
+    
+  }
+  h1{
+      color:black
+  }
+
+  .c-image1{
+      width: 420px;
+      height:300px;
   }
