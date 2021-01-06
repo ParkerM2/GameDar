@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar/Navbar"
 import Footer from "./components/Footer/Footer"
 import Home from "./pages/home"
 import Favorites from "./pages/favorites"
+import WishListPage from "./pages/Wishlist"
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Switch>
         <Route path="/" exact component={Home}/>
         <Route path="/Favorites" exact component={Favorites}/>
+        <Route path="/MyList" exact component={WishListPage}/>
       </Switch>
     </Router>
     
