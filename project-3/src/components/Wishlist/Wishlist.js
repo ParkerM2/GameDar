@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Wish from './WishItem';
 import WishlistForm from './WishlistForm';
+import "./Wishlist.css"
 
 function Wishlist() {
   const [wishes, setWishes] = useState([]);
@@ -44,7 +45,7 @@ function Wishlist() {
 
   return (
     <>
-      <h1>What's the Plan for Today?</h1>
+      <h1>Wish List</h1>
       <WishlistForm onSubmit={addWish} />
       <Wish
         wishes={wishes}

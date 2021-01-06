@@ -30,14 +30,17 @@ const Wish = ({ wishes, completeWish, removeWish, updateWish }) => {
         {wish.text}
       </div>
       <div className='icons'>
+
+      <TiEdit
+          onClick={() => setEdit({ id: wish.id, value: wish.text })}
+          className='edit-icon'
+        />
+        
         <RiCloseCircleLine
           onClick={() => removeWish(wish.id)}
           className='delete-icon'
         />
-        <TiEdit
-          onClick={() => setEdit({ id: wish.id, value: wish.text })}
-          className='edit-icon'
-        />
+       
       </div>
     </div>
   ));
