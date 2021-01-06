@@ -13,7 +13,7 @@ return(
         <Col>
 <Jumbotron>
 
-  <h1>Hello, world!</h1>
+  <h1>2021 </h1>
   <Carousel>
   <Carousel.Item interval={1000}>
     <img
@@ -55,9 +55,10 @@ return(
 </Jumbotron>
 </Col>
 
-// col 2
+//col 2 
 
-<Col></Col>
+<Col>
+</Col>
 </Row>
 
 )
