@@ -1,12 +1,13 @@
 import React from "react";
 import "../App.css"
-import WishlistForm from "../components/Wishlist/WishlistForm"
+
+import Wishlist from "../components/Wishlist/Wishlist";
 
 
 function WishListPage(){
     return(
 
-        <WishlistForm/>
+        <Wishlist/>
     )
 }
 
