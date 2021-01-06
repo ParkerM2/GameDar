@@ -15,16 +15,7 @@ function App() {
     </Router>
    
     </>
-
-import JumbotronThing from "./components/Jumbotron";
-
-function App() {
-  return (
-    <div className="App">
-      <JumbotronThing title="Bobbie" />
-    </div>
- main
-  );
-}
+  )
+  }
 
 export default App;
