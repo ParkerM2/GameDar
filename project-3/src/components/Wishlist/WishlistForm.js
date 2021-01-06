@@ -42,7 +42,7 @@ function WishlistForm(props) {
       ) : (
         <>
           <input
-            placeholder='Add a todo'
+            placeholder='Add a Game'
             value={input}
             onChange={handleChange}
             name='text'
@@ -50,7 +50,7 @@ function WishlistForm(props) {
             ref={inputRef}
           />
           <button onClick={handleSubmit} className='wish-button'>
-            Add todo
+          <i class="fas fa-search"></i>
           </button>
         </>
       )}
