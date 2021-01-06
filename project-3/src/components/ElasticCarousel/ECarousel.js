@@ -3,7 +3,7 @@ import Carousel from 'react-elastic-carousel'
 import Item from "./ECarouselItem";
 import Container from "react-bootstrap/Container"
 import Image from "react-bootstrap/Image"
-import SamplePic from "../assets/Runescape.jpg"
+import SamplePic from "../../assets/Runescape.jpg"
 import "./ECarousel.css"
 const breakPoints=[
     {width:1, itemsToShow:1},

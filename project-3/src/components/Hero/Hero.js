@@ -1,13 +1,13 @@
 import React from 'react'
-import {Button} from './Button'
+import {Button} from '../Navbar/Button'
 import './Hero.css'
 
 function HeroSection (){
     return(
         <div className='hero-container'>
         
-            <h1>RuneScape</h1>
-            <p>Game of the day</p>
+            <h1>Welcome to Game-Dar</h1>
+            <p>Keep Track of all your Games</p>
             <div className="hero-btns">
                 <Button 
                 className="btns" 
