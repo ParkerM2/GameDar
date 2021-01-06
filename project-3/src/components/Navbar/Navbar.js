@@ -1,6 +1,9 @@
 import React,{useEffect, useState} from 'react'
 import {Link} from "react-router-dom"
-import Button from "./Button"
+import Button from "react-bootstrap/Button"
+import Form from 'react-bootstrap/Form'
+import FormControl from "react-bootstrap/FormControl"
+import InputGroup from 'react-bootstrap/InputGroup'
 import "./NavBar.css"
 function Navbar(){
     const [click,setClick]= useState (false);
@@ -36,6 +39,33 @@ function Navbar(){
                     <i className={click ? "fas fa-times" :"fas fa-bars"}/>
                     
                 </div>
+            
+{/* serach bar */}
+
+                    
+
+                    <> 
+                    <div>
+  
+  <InputGroup className="mb-3">
+    <FormControl
+      placeholder="Recipient's username"
+      aria-label="Recipient's username"
+      aria-describedby="basic-addon2"
+    />
+    <InputGroup.Append>
+      <Button variant="outline-secondary">Search</Button>
+    </InputGroup.Append>
+  </InputGroup>
+
+</div>
+                    </>
+                 
+
+
+
+
+                {/* links */}
                 
                 <ul className= {click ? "nav-menu active": "nav-menu"}>
                     <li className="nav-item">
@@ -54,13 +84,12 @@ function Navbar(){
                         </Link>
                     </li>
                     <li className="nav-item">
-                        <Link to="/sign-up" className="nav-links-mobile" onClick={closeMobileMenu}>
-                            Sign up
+                        <Link to="/sign-up" className="nav-links" onClick={closeMobileMenu}>
+                            Sign In
                         </Link>
                     </li>
                 </ul>
-                {/* if true pass these children through */}
-                {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>}
+              
         </div>
 
     </nav>
