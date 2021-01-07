@@ -6,7 +6,7 @@ import Button from "react-bootstrap/Button"
 // 
 
 const SearchResults = props => {
-    return (props.books.length === 0) ? (
+    return (props.games.length === 0) ? (
         <div className="card">
             <div className="card-body player">
                 <div className="article">
@@ -15,22 +15,22 @@ const SearchResults = props => {
             </div>
         </div>
     ) :
-props.books.map(book=>{
+props.games.map(game=>{
     return(
 
 
 <Card >
-  <Card.Img id="CardImg" variant="top" src={book.image} />
+  <Card.Img id="CardImg" variant="top" src={game.image} />
   <Card.Body>
-    <Card.Title>{book.title}</Card.Title>
+    <Card.Title>{game.title}</Card.Title>
     <Card.Text>
-      {book.author}
+      {game.author}
     </Card.Text>
     <Card.Text>
-      {book.description}
+      {game.description}
     </Card.Text>
     <Button className="saveBook btn btn-primary" 
-    id={book.id} onClick={(event) => props.handleSavedButton(event)} 
+    id={game.id} onClick={(event) => props.handleSavedButton(event)} 
     variant="success">Product Page</Button>
   </Card.Body>
 </Card>)}

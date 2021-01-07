@@ -2,24 +2,24 @@ import axios from "axios"
 
 export default{
         // api call use book parameter as a search query
-    getCheapSharkSearchGames: function(book){
-        return axios.get("https://www.cheapshark.com/api/1.0/games?title=" + book)
+    getCheapSharkSearchGames: function(game){
+        return axios.get("https://www.cheapshark.com/api/1.0/games?title=" + game)
     },
 
     getBooks: function(){
-        return axios.get('/api/books');
+        return axios.get('/api/games');
     },
 
     getBook: function(id){
-        return axios.get('/api.books'+ id)
+        return axios.get('/api.games'+ id)
     },
 
-    saveBook: function (savedBooks){
-        return axios.post("/api/books", savedBooks);
+    saveCheapGame: function (savedCheapGames){
+        return axios.post("/api/games", savedCheapGames);
     },
 
     deleteBook: function(id){
-        return axios.delete('/api/books/'+id)
+        return axios.delete('/api/games/'+id)
     }
 
 
