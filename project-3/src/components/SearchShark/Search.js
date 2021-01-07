@@ -28,24 +28,25 @@ class SearchBooks extends Component {
         event.preventDefault();
         // once it clicks it connects to the google book api with the search value
         API.getGoogleSearchBooks(this.state.search)
-            .then(res => {
-                if (res.data.items === "error") {
-                    throw new Error(res.data.items);
+            .then(res => { console.log(res)
+                if (res.data === "error") {
+                    throw new Error(res.data);
                 }
                 else {
                     // store response in a array
-                    let results = res.data.items
+                    let results = res.data
+                console.log(results)
                     //map through the array 
                     results = results.map(result => {
                         //store each book information in a new object 
                         result = {
-                            key: result.id,
-                            id: result.id,
-                            title: result.volumeInfo.title,
-                            author: result.volumeInfo.authors,
-                            description: result.volumeInfo.description,
-                            image: result.volumeInfo.imageLinks.thumbnail,
-                            link: result.volumeInfo.infoLink
+                            key: result.GameID,
+                            id: result.GameID,
+                            title: result.internalName,
+                            author: result.External,
+                            description: result.cheapest,
+                            image: result.thumb,
+                            link: result.cheapest
                         }
                         return result;
                     })
