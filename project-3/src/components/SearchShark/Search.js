@@ -42,8 +42,8 @@ class SearchBooks extends Component {
                         result = {
                             key: result.GameID,
                             id: result.GameID,
-                            title: result.internalName,
-                            author: result.External,
+                            title: result.external,
+                            // author: result.external,
                             description: result.cheapest,
                             image: result.thumb,
                             link: result.cheapest
