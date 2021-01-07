@@ -10,7 +10,7 @@ function WishListPage(){
 <>
         <Wishlist/>
         <SearchBooks/>
-        {/* <Footer/> */}
+        <Footer/>
 </>
     )
 }
