@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Jumbotron from "react-bootstrap/Jumbotron";
+import Jumbotron from "../../components/MyJumbotron/jumbotron";
 import Container from "react-bootstrap/Container"
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
@@ -27,7 +27,7 @@ class SearchBooks extends Component {
     handleFormSubmit = event => {
         event.preventDefault();
         // once it clicks it connects to the google book api with the search value
-        API.getGoogleSearchBooks(this.state.search)
+        API.getCheapSharkSearchGames(this.state.search)
             .then(res => { console.log(res)
                 if (res.data === "error") {
                     throw new Error(res.data);
@@ -70,7 +70,8 @@ class SearchBooks extends Component {
     render() {
         return (
             <Container fluid>
-                <Jumbotron title="Search and Save Your Books" text="Powered by GoogleBook API">
+                <Jumbotron title="Search Below for the cheapest price on the web"
+                 text="Powered by CheapShark API">
                  
                 </Jumbotron>
                 <Container>
