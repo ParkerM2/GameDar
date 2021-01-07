@@ -50,7 +50,7 @@ function WishlistForm(props) {
             ref={inputRef}
           />
           <button onClick={handleSubmit} className='wish-button'>
-          <i class="fas fa-search"></i>
+          <i class="fa fa-plus"></i>
           </button>
         </>
       )}

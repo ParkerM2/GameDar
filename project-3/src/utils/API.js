@@ -2,7 +2,7 @@ import axios from "axios"
 
 export default{
         // api call use book parameter as a search query
-    getGoogleSearchBooks: function(book){
+    getCheapSharkSearchGames: function(book){
         return axios.get("https://www.cheapshark.com/api/1.0/games?title=" + book)
     },
 
