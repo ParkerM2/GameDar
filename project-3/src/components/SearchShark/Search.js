@@ -3,17 +3,17 @@ import Jumbotron from "../../components/MyJumbotron/jumbotron";
 import Container from "react-bootstrap/Container"
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
-import SearchForm from "./SearchForm"
+import CheapSearchForm from "./SearchForm"
 import SearchResults from "./SearchResults"
 // import Nav from "./components/Nav";
 import API from "../../utils/API";
 
 
-class SearchBooks extends Component {
+class SearchCheapGames extends Component {
     //create state
     state = {
         search: "",
-        books: [],
+        games: [],
         error: "",
         message: ""
     };
@@ -51,7 +51,7 @@ class SearchBooks extends Component {
                         return result;
                     })
                     // reset the sate of the empty books array to the new arrays of objects with properties geting back from the response
-                    this.setState({ books: results, error: "" })
+                    this.setState({ games: results, error: "" })
                 }
             })
             .catch(err => this.setState({ error: err.items }));
@@ -60,11 +60,11 @@ class SearchBooks extends Component {
     handleSavedButton = event => {
         // console.log(event)
         event.preventDefault();
-        console.log(this.state.books)
-        let savedBooks = this.state.books.filter(book => book.id === event.target.id)
-        savedBooks = savedBooks[0];
-        API.saveBook(savedBooks)
-            .then(this.setState({ message: alert("Your book is saved") }))
+        console.log(this.state.games)
+        let savedCheapGames = this.state.games.filter(game => game.id === event.target.id)
+        savedCheapGames = savedCheapGames[0];
+        API.saveCheapGames(savedCheapGames)
+            .then(this.setState({ message: alert("Your Game is saved") }))
             .catch(err => console.log(err))
     }
     render() {
@@ -77,7 +77,7 @@ class SearchBooks extends Component {
                 <Container>
                     <Row>
                         <Col size="12">
-                            <SearchForm
+                            <CheapSearchForm
                                 handleFormSubmit={this.handleFormSubmit}
                                 handleInputChange={this.handleInputChange}
                             />
@@ -86,7 +86,7 @@ class SearchBooks extends Component {
                 </Container>
                 <br></br>
                 <Container>
-                    <SearchResults books={this.state.books} handleSavedButton={this.handleSavedButton}  />
+                    <SearchResults games={this.state.games} handleSavedButton={this.handleSavedButton}  />
                 </Container>
             </Container>
         )
@@ -95,4 +95,4 @@ class SearchBooks extends Component {
 
 }
 
-export default SearchBooks
+export default SearchCheapGames

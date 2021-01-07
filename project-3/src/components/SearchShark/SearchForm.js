@@ -1,7 +1,7 @@
 import React from "react";
 
 
-const SearchForm = props => {
+const CheapSearchForm = props => {
     return (
         <form>
             <div className="form-group">
@@ -24,4 +24,4 @@ const SearchForm = props => {
 
 
 
-export default SearchForm
+export default CheapSearchForm
