@@ -37,25 +37,25 @@
     opacity: 0.4;
   }
   
-  .todo-form {
+  .wish-form {
     margin-bottom: 32px;
   }
   
-  .todo-input {
+  .wish-input {
     padding: 14px 32px 14px 16px;
     border-radius: 4px 0 0 4px;
-    border: 2px solid #5d0cff;
+    border: 2px solid white;
     outline: none;
     width: 320px;
     background: transparent;
     color: #fff;
   }
   
-  .todo-input::placeholder {
+  .wish-input::placeholder {
     color: #e2e2e2;
   }
   
-  .todo-button {
+  .wish-button {
     padding: 16px;
     border: none;
     border-radius: 0 4px 4px 0;
@@ -70,11 +70,11 @@
     text-transform: capitalize;
   }
   
-  .todo-input.edit {
+  .wish-input.edit {
     border: 2px solid #149fff;
   }
   
-  .todo-button.edit {
+  .wish-button.edit {
     background: linear-gradient(
       90deg,
       rgba(20, 159, 255, 1) 0%,
@@ -83,13 +83,13 @@
     padding: 16px 22px;
   }
   
-  .todo-container {
+  .wish-container {
     display: flex;
     flex-direction: row;
     position: relative;
   }
   
-  .todo-row {
+  .wish-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -97,8 +97,8 @@
     color: #fff;
     background: linear-gradient(
       90deg,
-      rgba(255, 118, 20, 1) 0%,
-      rgba(255, 84, 17, 1) 100%
+      rgba(20, 159, 255, 1) 0%,
+      rgba(17, 122, 255, 1) 100%
     );
   
     padding: 16px;
