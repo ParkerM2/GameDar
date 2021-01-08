@@ -5,7 +5,8 @@ import Form from 'react-bootstrap/Form'
 import FormControl from "react-bootstrap/FormControl"
 import InputGroup from 'react-bootstrap/InputGroup'
 import "./NavBar.css"
-function Navbar(){
+
+function Navbar({ loggedIn }){
     const [click,setClick]= useState (false);
     const [button,setButton]=useState(true)
 
