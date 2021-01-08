@@ -8,9 +8,7 @@ import HeroSection from "../components/Hero/Hero"
 function Home(){
     return (
         <>
-        <HeroSection/>
-        
-        <Footer/>
+            <HeroSection/>
         </>
     )
 }
