@@ -8,9 +8,7 @@ import WishlistForm from "../components/Wishlist/WishlistForm"
 function Home(){
     return (
         <>
-        <HeroSection/>
-        
-        <Footer/>
+            <HeroSection/>
         </>
     )
 }
