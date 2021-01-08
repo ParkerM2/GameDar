@@ -24,22 +24,21 @@ const options = {
       'x-rapidapi-host': 'rawg-video-games-database.p.rapidapi.com'
     }
   };
-    const [data, setData] = useState({ gamesArray: [] });
+    const [gameData, setData] = useState();
     useEffect(() => {
         const fetchData = async () => {
+
           const result = await axios(
             options
           )
-          .then(function (response) {
-            console.log(response.data.results);})
-     
+          console.log(result.data.results);
+          setData(result.data.results)
 
 
-          setData(result.data)
+          console.log(gameData);
 
 
-        };
-        
+        }
      
         fetchData();
       }, []);
@@ -48,13 +47,18 @@ return(
 <> 
 <Container>
 <h1 style={{textAlign:'center'}}>New Releases</h1>
+
+
 <ul>
-      {data.gamesArray.map(item => (
+      {gameData.map(item => (
         <li key={item.objectID}>
-          <a href={item.url}>{item.title}</a>
+          <a href={item.url}>{item.name}</a>
         </li>
       ))}
     </ul>
+
+
+
 <div className="ECarousel">
     <h1>Recommended</h1>
     <Carousel breakPoints={breakPoints}>
