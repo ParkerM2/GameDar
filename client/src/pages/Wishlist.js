@@ -5,7 +5,7 @@ import SearchCheapGames from "../components/SearchShark/Search"
 import Wishlist from "../components/Wishlist/Wishlist";
 
 
-function WishListPage(){
+function WishListPage({ fetch }){
     return(
 <>
         <Wishlist/>

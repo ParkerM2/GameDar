@@ -40,12 +40,12 @@ let createNewUser = (data) => {
             //create a new account
             DBConnection.query(
                 ' INSERT INTO users set ? ', user,
-                function(err, rows) {
+                function(err, result) {
                     if (err) {
                         return reject("Create user failed")
                     }
-                    console.log("Create a new user success!")
-                    resolve("Create a new user successful");
+                    console.log("Create a new user success!", result)
+                    resolve(result.insertId);
                 }
             )
             });    

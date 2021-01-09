@@ -13,6 +13,10 @@ import WishListPage from "./pages/Wishlist"
 function App() {
   const [token, setToken] = useState(null)
 
+  const authenticatedFetch = (url, options) => {
+    return fetch(url, { ...options, headers: { Authorization: `Bearer ${token}`} }).then(res => res.json())
+  }
+
   return (
     <>
       <Router>
@@ -25,7 +29,7 @@ function App() {
             <Favorites token={token} />
           </Route>
           <Route path="/MyList" exact>
-            <WishListPage token={token}/>
+            <WishListPage fetch={authenticatedFetch}/>
           </Route>
           <Route path="/register" exact>
             <Register onSuccess={(token) => setToken(token)}/> 

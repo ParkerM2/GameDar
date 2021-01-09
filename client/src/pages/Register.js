@@ -5,7 +5,8 @@ function Register({ onSuccess }) {
     const [errors, setErrors] = useState(null)
 
     const handleSubmit = async (formData) => {
-        const response = await fetch("/api/register", { method: "POST", body: formData})
+        const payload = new URLSearchParams(formData.entries())
+        const response = await fetch("/api/register", { method: "POST", body: payload})
         const body = await response.json()
 
         console.log("registerResponse", body)

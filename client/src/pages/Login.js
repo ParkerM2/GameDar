@@ -6,7 +6,8 @@ function Login({ onSuccess }) {
     const [errors, setErrors] = useState(null)
 
     const handleSubmit = async (formData) => {
-        const response = await fetch("/api/login", { method: "POST", body: formData})
+        const payload = new URLSearchParams(formData.entries())
+        const response = await fetch("/api/login", { method: "POST", body: payload })
         const body = await response.json()
 
         console.log("loginResponse", body)
