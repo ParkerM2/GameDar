@@ -29,7 +29,7 @@ function App() {
             <Favorites token={token} />
           </Route>
           <Route path="/MyList" exact>
-            <WishListPage fetch={authenticatedFetch}/>
+            <WishListPage fetcher={authenticatedFetch}/>
           </Route>
           <Route path="/register" exact>
             <Register onSuccess={(token) => setToken(token)}/> 
