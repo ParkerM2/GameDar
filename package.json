@@ -4,20 +4,13 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-<<<<<<< HEAD
-    "devStart": "nodemon server.js",
-    "start": "concurrently \"npm run server\" \"npm run client\"",
-    "server" : "node server.js",
-    "client" : "node start-client.js"
-=======
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "start:prod": "node server.js",
     "start:dev": "concurrently \"nodemon --ignore client/\" \"npm run client\"",
     "client": "cd client && npm run start",
     "install": "cd client && npm install",
-    "build": "cd client && npm run build",
-    "heroku-postbuild": "npm run build"
->>>>>>> 48918fdce04c964086fa2ad2200f7d6b62e623da
+    "build": "cd client && npm run build"
+    
   },
   "repository": {
     "type": "git",

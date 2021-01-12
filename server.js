@@ -66,9 +66,9 @@ app.use(apiRoutes);
 // renderWishList.wishListRenderPage(app);
 
 // Send every HTML route to React App
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, './client/build/index.html'));
-});
+// app.get('*', (req, res) => {
+//   res.sendFile(path.join(__dirname, './client/index.html'));
+// });
 
 let port = process.env.PORT || 3001;
 
