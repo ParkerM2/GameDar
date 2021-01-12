@@ -13,6 +13,7 @@ function WishListPage({ fetcher }){
 <>
         <Wishlist/>
         <pre>{JSON.stringify(error || data)}</pre>
+        <h1>{data}</h1>
         <SearchCheapGames/>
         
 </>
