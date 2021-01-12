@@ -14,16 +14,16 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const path = require('path');
 
-const userPageRoutes = require('./routes/userpage-routes');
-const { searchPageRender } = require('./routes/searchpage');
-const renderWishList = require('./routes/wishlist');
-const homePage = require('./controllers/home-page');
-const apiUserRoutes = require('./routes/api/user')
-require('./passport-config')
-
+// const userPageRoutes = require('./routes/userpage-routes');
+// const { searchPageRender } = require('./routes/api/searchpage');
+// const renderWishList = require('./routes/wishlist');
+// const homePage = require('./controllers/home-page');
+// const apiUserRoutes = require('./routes/api/user')
+// require('./passport-config')
+const apiRoutes = require('./routes');
 const app = express();
 
-app.use(morgan('tiny'));
+// app.use(morgan('tiny'));
 
 //use cookie parser
 app.use(cookieParser('secret'));
@@ -38,17 +38,17 @@ app.use(session({
     }
 }));
 
-app.set("view engine", "handlebars");
+// app.set("view engine", "handlebars");
 
-app.engine("handlebars", exphbs({ 
-  defaultLayout: "main",
-  layoutsDir: path.join(__dirname, 'views/layouts')
- }));
+// app.engine("handlebars", exphbs({ 
+//   defaultLayout: "main",
+//   layoutsDir: path.join(__dirname, 'views/layouts')
+//  }));
 
 // Enable body parser post data
 app.use(bodyParser.json());
 
-app.use(bodyParser.urlencoded({ extended: true }));
+// app.use(bodyParser.urlencoded({ extended: true }));
 
 //Enable flash message
 app.use(connectFlash());
@@ -58,14 +58,17 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // init all web routes
-app.use(apiUserRoutes)
-initWebRoutes(app);
-homePage.handleHelloWorld(app);
-userPageRoutes.userPageRender(app);
-searchPageRender(app);
-renderWishList.wishListRenderPage(app);
+app.use(apiRoutes);
+// initWebRoutes(app);
+// homePage.handleHelloWorld(app);
+// userPageRoutes.userPageRender(app);
+// searchPageRender(app);
+// renderWishList.wishListRenderPage(app);
 
-app.use(express.static(__dirname + '/public'));
+// Send every HTML route to React App
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, './client/build/index.html'));
+});
 
 let port = process.env.PORT || 8080;
 

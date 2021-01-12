@@ -5,7 +5,9 @@
   "main": "server.js",
   "scripts": {
     "devStart": "nodemon server.js",
-    "start": "node server.js"
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server" : "node server.js",
+    "client" : "node start-client.js"
   },
   "repository": {
     "type": "git",
@@ -39,6 +41,7 @@
     "unirest": "^0.6.0"
   },
   "devDependencies": {
+    "concurrently": "^5.3.0",
     "dotenv": "^8.2.0",
     "nodemon": "^2.0.6",
     "sequelize": "^6.3.5",

@@ -26,7 +26,7 @@ function Register({ onSuccess }) {
                 <div className="col-4 login-left">
                 </div>
                 <div className="col-5 mt-2">
-                    <UserForm onSubmit={handleSubmit} errors={errors}/>
+                    <UserForm onSubmit={handleSubmit} errors={errors} />
 
                     <hr/>
                     <div>
