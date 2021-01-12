@@ -70,6 +70,6 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, './client/build/index.html'));
 });
 
-let port = process.env.PORT || 8080;
+let port = process.env.PORT || 3001;
 
 app.listen(port, () => console.log(`Building a login system with NodeJS is running on port ${port}!`));

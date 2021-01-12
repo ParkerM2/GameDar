@@ -14,7 +14,7 @@ function WishListPage({ fetcher }){
         <Wishlist/>
         <pre>{JSON.stringify(error || data)}</pre>
         <SearchCheapGames/>
-        <Footer/>
+        
 </>
     )
 }
