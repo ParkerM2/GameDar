@@ -5,7 +5,7 @@ import {BrowserRouter as Router,Switch,Route} from
 import Navbar from "./components/Navbar/Navbar"
 import Footer from "./components/Footer/Footer"
 import Home from "./pages/Home"
-import Favorites from "../src/pages/Favorites"
+import Favorites from "./pages/Favorites"
 import Register from "./pages/Register"
 import Login from "./pages/Login"
 import WishListPage from "./pages/Wishlist"
