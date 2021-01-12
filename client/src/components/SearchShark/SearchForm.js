@@ -14,6 +14,9 @@ const CheapSearchForm = props => {
                     placeholder="Runescape"
                     onChange={props.handleInputChange}
                 />
+                <div>
+                    <h3>You are Currently Searching : {props.handleInputChange}</h3>
+                </div>
             </div>
             <button type="submit" className="submitBtn btn btn-primary" onClick={props.handleFormSubmit}>
                 Submit
