@@ -47,3 +47,108 @@ export default UserPage;
 
 
 
+            {/* Inputting Column for news from api call */}
+                <Col>
+                    <Jumbotron className="mt-3"> 
+                       {/* insert API INFO */}
+                        <h1>API INFO HERE</h1>
+
+                    </Jumbotron>
+                </Col>
+            </Row>       
+        </Container>
+        
+        
+       
+    )
+
+}
+
+export default UserPage;
+
+
+
+            {/* Inputting Column for news from api call */}
+                <Col>
+                    <Jumbotron className="mt-3"> 
+                       {/* insert API INFO */}
+                        <h1>API INFO HERE</h1>
+
+                    </Jumbotron>
+                </Col>
+            </Row>       
+        </Container>
+        
+        
+       
+    )
+
+}
+
+export default UserPage;
+
+
+
+            {/* Inputting Column for news from api call */}
+                <Col>
+                    <Jumbotron className="mt-3"> 
+                       {/* insert API INFO */}
+                        <h1>API INFO HERE</h1>
+
+                    </Jumbotron>
+                </Col>
+            </Row>       
+        </Container>
+        
+        
+       
+    )
+
+}
+
+export default UserPage;
+
+
+
+            {/* Inputting Column for news from api call */}
+                <Col>
+                    <Jumbotron className="mt-3"> 
+                       {/* insert API INFO */}
+                        <h1>API INFO HERE</h1>
+
+                    </Jumbotron>
+                </Col>
+            </Row>       
+        </Container>
+        
+        
+       
+    )
+
+}
+
+export default UserPage;
+
+
+
+            {/* Inputting Column for news from api call */}
+                <Col>
+                    <Jumbotron className="mt-3"> 
+                       {/* insert API INFO */}
+                        <h1>API INFO HERE</h1>
+
+                    </Jumbotron>
+                </Col>
+            </Row>       
+        </Container>
+        
+        
+       
+    )
+
+}
+
+export default UserPage;
+
+
+
