@@ -7,8 +7,8 @@ import Footer from "./components/Footer/Footer"
 import Home from "./pages/Home"
 import Favorites from "./pages/Favorites"
 import Register from "./pages/Register"
-import Login from "./pages/Login"
-import WishListPage from "./pages/Wishlist"
+import SignIn from "./pages/Login"
+import Search from "./pages/Wishlist"
 import UserPage from "./pages/User";
 
 function App() {
@@ -26,20 +26,14 @@ function App() {
           <Route path="/" exact>
             <Home />
           </Route>
-          <Route path="/Favorites" exact>
-            <Favorites token={token} />
+          <Route path="/user" exact>
+            <UserPage fetcher={authenticatedFetch}/>
           </Route>
-          <Route path="/MyList" exact>
-            <WishListPage fetcher={authenticatedFetch}/>
-          </Route>
-          <Route path="/register" exact>
-            <Register onSuccess={(token) => setToken(token)}/> 
+          <Route path="/myList" exact>
+            <Search onSuccess={(token) => setToken(token)}/> 
           </Route>
           <Route path="/login" exact>
-            <Login onSuccess={(token) => setToken(token)}/>
-          </Route>
-          <Route path="/User" exact>
-            <UserPage fetcher={authenticatedFetch}/>
+            <SignIn onSuccess={(token) => setToken(token)}/>
           </Route>
         </Switch>
         <Footer />
