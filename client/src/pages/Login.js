@@ -12,6 +12,7 @@ function Login({ onSuccess }) {
 
         console.log("loginResponse", body)
         if (response.ok) {
+            <Link exact-path ="/"/>
             // handle login success
             setErrors(null)
             onSuccess(body.token)
