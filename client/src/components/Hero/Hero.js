@@ -8,6 +8,7 @@ function HeroSection (){
         
             <h1>Welcome to Game-Dar</h1>
             <p>Keep Track of all your Games</p>
+            <video src='/videos/video-1.mp4' autoPlay loop muted />
             <div className="hero-btns">
                 <Button 
                 className="btns" 
