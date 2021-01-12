@@ -36,7 +36,7 @@ function Footer() {
           <div className='social-icons'>
             <a className ="social-icon-link" href='/login'>Login</a>
             
-            <a className ="social-icon-link"  href='/register'>SignUp</a>
+            <a className ="social-icon-link"  href='/register'>Sign Up</a>
             
             <a className ="social-icon-link"  href='/MyList'>Search</a>
             
