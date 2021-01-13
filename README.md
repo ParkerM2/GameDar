@@ -7,17 +7,35 @@
 
 </p>
 
-### 🏠 [Our Project Homepage](https://github.com/ParkerM2/GamesList)
+![Test Image 3](client/public/images/homepage.PNG)
+
+### 🏠 [Our Project Homepage](https://github.com/ParkerM2/Project-3)
+
+---
+## ✍ Authors
+
+**Parker Manning - https://github.com/ParkerM2**
+
+**Thomas Althoff - https://github.com/tmalthoff**
+
+**Emilio Conde - https://github.com/condeemilio891**
+
+**Chambers Mansour - https://github.com/ChambersM97**
 
 
 ---
 ## User Story
 
-As a video game user, I want to be able to look up and save my played games to a list so that I am able to show it to anyone else who plays games, as well as a personal place for nostalgia.
+As a video game user, I want to be able to look up and save my favorite games to my PERSONAL list so that I am able to keep a record and share with others.
 
 ---
 ## Description
-Once a user is registered and verified, our website assigns a pokemon to each individual user, and is then allowed to search a database of games to pick what they want to add to their personal game list. Each game searched contains information such as: game title, platform, year released, and Metacritic review scores.
+Once a user is registered and verified, our website (for fun :o) assigns a pokemon to each individual user, and is then allowed to search a database of games to pick what they want to add to their personal game list. The effort of this project was centered around using the 
+
+---
+
+## Techonologies Used
+
 
 ---
 ## Installation
@@ -32,20 +50,9 @@ npm install
 npm run start
 
 ---
-## ✍ Authors
-
-**Parker Manning - https://github.com/ParkerM2**
-
-**Thomas Althoff - https://github.com/tmalthoff**
-
-**Emilio Conde - https://github.com/condeemilio891**
-
-**Chambers Mansour - https://github.com/ChambersM97**
-
----
 ## 👨‍👨‍👦‍👦 Contributing
 
-Feature requests are welcome!<br />You can take a look at the [contributing guide](https://github.com/ParkerM2/GamesList/graphs/contributors).
+<br />Checkout this link to see the team's [contributions and commits](https://github.com/ParkerM2/Project-3/graphs/contributors).
 
 ---
 ## Like the App?
