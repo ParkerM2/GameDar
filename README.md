@@ -24,12 +24,12 @@
 
 
 ---
-## User Story
+## User Story 📗
 
 As a video game user, I want to be able to look up and save my favorite games to my PERSONAL list so that I am able to keep a record and share with others.
 
 ---
-## Description
+## 👀 Description 👀
 Once a user is registered and verified, our website (for fun :o) assigns a pokemon to each individual user, and is then allowed to search a database of games to pick what they want to add to their personal game list. The effort of this project was centered around using the 
 
 ---
@@ -40,13 +40,13 @@ Once a user is registered and verified, our website (for fun :o) assigns a pokem
 ![](client/public/images/node-js-logo.png)
 
 ---
-## Installation
+## Installation 🔧
 
 
 npm install
 
 ---
-## Usage
+## Usage 🔱
 
 To be able to start the application:
 type `npm start`
