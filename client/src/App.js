@@ -4,10 +4,10 @@ import {BrowserRouter as Router,Switch,Route} from
 'react-router-dom';
 import Navbar from "./components/Navbar/Navbar"
 import Footer from "./components/Footer/Footer"
-import Home from "./pages/Home"
+import Home from "./pages/home"
 import SignIn from "./pages/Login"
 import Search from "./pages/Wishlist"
-import UserPage from "./pages/User";
+import UserPage from "./pages/user";
 
 function App() {
   const [token, setToken] = useState(null)
