@@ -37,14 +37,7 @@ function UserPage ({ fetcher }) {
 
                     </Jumbotron>
                 </Col>
-            </Row>    
-
-         <Row>
-             
-         <Wishlist/>
-             
-             
-             </Row>   
+            </Row>     
         </Container>
         
         

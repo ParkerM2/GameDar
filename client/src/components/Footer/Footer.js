@@ -53,7 +53,7 @@ function Footer() {
 
             <a 
                 className ="social-icon-link twitter"
-                href="https://github.com/"
+                href="https://github.com/ParkerM2"
                 target= '_blank'
                 aria-label
               a> 
@@ -62,7 +62,7 @@ function Footer() {
               </a> 
               <a 
                 className ="social-icon-link twitter"
-                href="https://github.com/"
+                href="https://github.com/condeemilio891"
                 target= '_blank'
                 aria-label
               a> 
@@ -72,7 +72,7 @@ function Footer() {
             
               <a 
                 className ="social-icon-link twitter"
-                href="https://github.com/"
+                href="https://github.com/ChambersM97"
                 target= '_blank'
                 aria-label
               a> 
@@ -81,7 +81,7 @@ function Footer() {
               </a> 
               <a 
                 className ="social-icon-link twitter"
-                href="https://github.com/"
+                href="https://github.com/tmalthoff"
                 target= '_blank'
                 aria-label
               a> 
