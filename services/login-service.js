@@ -13,13 +13,25 @@ let handleLogin = (email, password) => {
         // console.log(user)
         if (user) {
             //compare password
-            await comparePassword(password, user).then((isMatch) => {
+            try{
+                const isMatch = await comparePassword(password, user);
                 if (isMatch) {
-                    resolve(true);
-                } else {
-                    reject(`The password that you've entered is incorrect`);
-                }
-            });
+                            resolve(true);
+                        } else {
+                            reject(`The password that you've entered is incorrect`);
+                        }
+            }catch(e){
+                reject(e);
+            }
+            
+
+            // await comparePassword(password, user).then((isMatch) => {
+            //     if (isMatch) {
+            //         resolve(true);
+            //     } else {
+            //         reject(`The password that you've entered is incorrect`);
+            //     }
+            // }).catch(reject);
         } else {
             reject(`This user email "${email}" doesn't exist`);
         }
@@ -70,11 +82,12 @@ let comparePassword = (password, userObject) => {
         // console.log(userObject.user_password, " hashed password in 'comparepassword login-service.js'")
         // console.log("compare to the inputed password on website", password)
         try {
+            console.log('pass is', password, userObject.user_password)
             await bcrypt.compare(password, userObject.user_password).then((isMatch) => {
                 if (isMatch) {
                     resolve(true);
                 } else {
-                    resolve(`The password that you've entered is incorrect`);
+                    reject(`The password that you've entered is incorrect`);
                 }
             });
         } catch (e) {
