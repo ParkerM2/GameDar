@@ -8,7 +8,7 @@ import Home from "./pages/home"
 import SignIn from "./pages/Login"
 import Search from "./pages/Wishlist"
 import UserPage from "./pages/user";
-
+import Register from "./pages/registration";
 function App() {
   const [token, setToken] = useState(null)
 
@@ -32,6 +32,9 @@ function App() {
           </Route>
           <Route path="/login" exact>
             <SignIn onSuccess={(token) => setToken(token)}/>
+          </Route>
+          <Route path="/register" exact>
+            <Register onSuccess={(token) => setToken(token)}/>
           </Route>
         </Switch>
         <Footer />
