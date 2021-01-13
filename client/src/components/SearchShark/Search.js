@@ -9,6 +9,7 @@ import SearchResults from "./SearchResults"
 import API from "../../utils/API";
 
 
+
 class SearchCheapGames extends Component {
     //create state
     state = {
@@ -43,12 +44,13 @@ class SearchCheapGames extends Component {
                             key: result.GameID,
                             id: result.GameID,
                             title: result.external,
-                            // author: result.external,
+                            author: result.cheapest,
                             description: result.cheapest,
                             image: result.thumb,
                             link: result.cheapest
                         }
                         return result;
+                        
                     })
                     // reset the sate of the empty books array to the new arrays of objects with properties geting back from the response
                     this.setState({ games: results, error: "" })
@@ -61,17 +63,15 @@ class SearchCheapGames extends Component {
         // console.log(event)
         event.preventDefault();
         console.log(this.state.games)
-        let savedCheapGames = this.state.games.filter(game => game.id === event.target.id)
-        savedCheapGames = savedCheapGames[0];
-        API.saveCheapGames(savedCheapGames)
-            .then(this.setState({ message: alert("Your Game is saved") }))
-            .catch(err => console.log(err))
+        
     }
     render() {
         return (
             <Container fluid>
                 <Jumbotron title="Search Below for the cheapest price on the web"
-                 text="Powered by CheapShark API">
+                 text="Powered by CheapShark API"
+                 >
+                     
                  
                 </Jumbotron>
                 <Container>

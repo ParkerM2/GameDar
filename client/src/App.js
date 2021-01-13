@@ -4,11 +4,10 @@ import {BrowserRouter as Router,Switch,Route} from
 'react-router-dom';
 import Navbar from "./components/Navbar/Navbar"
 import Footer from "./components/Footer/Footer"
-import Home from "./pages/home"
-import Favorites from "./pages/favorites"
-import Register from "./pages/Register"
-import Login from "./pages/Login"
-import WishListPage from "./pages/Wishlist"
+import Home from "./pages/Home"
+import SignIn from "./pages/Login"
+import Search from "./pages/Wishlist"
+import UserPage from "./pages/User";
 
 function App() {
   const [token, setToken] = useState(null)
@@ -25,17 +24,14 @@ function App() {
           <Route path="/" exact>
             <Home />
           </Route>
-          <Route path="/Favorites" exact>
-            <Favorites token={token} />
+          <Route path="/user" exact>
+            <UserPage fetcher={authenticatedFetch}/>
           </Route>
-          <Route path="/MyList" exact>
-            <WishListPage fetcher={authenticatedFetch}/>
-          </Route>
-          <Route path="/register" exact>
-            <Register onSuccess={(token) => setToken(token)}/> 
+          <Route path="/myList" exact>
+            <Search onSuccess={(token) => setToken(token)}/> 
           </Route>
           <Route path="/login" exact>
-            <Login onSuccess={(token) => setToken(token)}/>
+            <SignIn onSuccess={(token) => setToken(token)}/>
           </Route>
         </Switch>
         <Footer />

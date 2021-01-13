@@ -1,35 +1,15 @@
-<h1 align="center">Welcome to GameDex 👋</h1>
+<h1 align="center" class="fas fa-microscope">Welcome to GameDar 🔬</h1>
 <p align="center">
-  <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
+  <img alt="Version" src="https://img.shields.io/badge/version-2.0.0-blue.svg?cacheSeconds=2592000" />
   <a href="https://github.com/ParkerM2/GamesList#readme" target="_blank">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
   </a>
 
 </p>
 
-### 🏠 [Our Project Homepage](https://github.com/ParkerM2/GamesList)
+![Test Image 3](client/public/images/homepage.PNG)
 
-
----
-## User Story
-
-As a video game user, I want to be able to look up and save my played games to a list so that I am able to show it to anyone else who plays games, as well as a personal place for nostalgia.
-
----
-## Description
-Once a user is registered and verified, our website assigns a pokemon to each individual user, and is then allowed to search a database of games to pick what they want to add to their personal game list. Each game searched contains information such as: game title, platform, year released, and Metacritic review scores.
-
----
-## Installion
-
-
-npm install
-
----
-## Usage
-
-
-npm run start
+### 🏠 [Our Project Homepage](https://github.com/ParkerM2/Project-3)
 
 ---
 ## ✍ Authors
@@ -42,15 +22,52 @@ npm run start
 
 **Chambers Mansour - https://github.com/ChambersM97**
 
+
+---
+## User Story 📗
+
+As a video game user, I want to be able to look up and save my favorite games to my PERSONAL list so that I am able to keep a record and share with others.
+
+---
+## 👀 Description 👀
+Once a user is registered and verified, our website (for fun :o) assigns a pokemon to each individual user, and is then allowed to search a database of games to pick what they want to add to their personal game list. The effort of this project was centered around using the 
+
+---
+
+## Techonologies Used
+![](client/public/images/react.png)
+![](client/public/images/MySQL-logo.png)
+![](client/public/images/node-js-logo.png)
+
+---
+## Installation 🔧
+
+
+npm install
+
+---
+## Usage 🔱
+
+To be able to start the application:
+type `npm start`
+
 ---
 ## 👨‍👨‍👦‍👦 Contributing
 
-Feature requests are welcome!<br />You can take a look at the [contributing guide](https://github.com/ParkerM2/GamesList/graphs/contributors).
+<br />Checkout this link to see the team's [contributions and commits](https://github.com/ParkerM2/Project-3/graphs/contributors).
 
 ---
 ## Like the App?
 
 Give a 👍🏻 if you would use this application!
+
+<h2>Checkout our Linkedins:</h2>
+
+ 🤠 [Chambers Mansour](https://www.linkedin.com/in/chambers-mansour/)
+
+ 😀 [Parker Manning](https://www.linkedin.com/in/parkerm2/)
+
+😁 [Matthew Althoff](https://www.linkedin.com/in/thomasalthoff/)
 
 
 

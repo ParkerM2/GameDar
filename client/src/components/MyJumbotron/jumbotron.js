@@ -2,6 +2,8 @@ import React from "react"
 import Jumbotron from 'react-bootstrap/Jumbotron'
 import Container from 'react-bootstrap/Container'
 import "./jumbotron.css"
+import Image from "react-bootstrap/Image"
+import SharkIcon from "../../assets/cheapSharkIcon.jpg"
 
 const MyJumbotron= (props)=>{
     return(
@@ -11,6 +13,7 @@ const MyJumbotron= (props)=>{
     <p>
       {props.text}
     </p>
+    <Image src={SharkIcon}roundedCircle className="h-1 w-1 k mr-100" />
   </Container>
 </Jumbotron>
     );

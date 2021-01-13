@@ -31,27 +31,23 @@ function Footer() {
             <Link to='/' className='social-logo'>
               <i className='fas fa-microscope' />
             </Link>
-          </div>
-
-
-            
-            
+      </div>
         
-    
-          {/* filter={toUpperCaseFilter} */}
-
+          <div className='social-icons'>
+            <a className ="social-icon-link" href='/login'>Login</a>
+            
+            <a className ="social-icon-link"  href='/register'>Sign Up</a>
+            
+            <a className ="social-icon-link"  href='/MyList'>Search</a>
+            
+            <a className ="social-icon-link"  href='/user'>User Page</a>
+          
+          </div>
+          
          
-        
-          <div className='social-icon-link'>
-            <a  href='/login'>Login</a>
-            <a  href='/register'>SignUp</a>
-            <a  href='/MyList'>Wishlist</a>
-          
-          </div>
-          
-          <small className='website-rights'>
+          <p className='website-rights'>
           <Moment component={dateToFormat} /> 
-          </small>
+          </p>
 
           <div className='social-icons'>
 
@@ -73,6 +69,7 @@ function Footer() {
               <i className='fab fa-github' />
               Emilio
               </a> 
+            
               <a 
                 className ="social-icon-link twitter"
                 href="https://github.com/"
@@ -91,8 +88,10 @@ function Footer() {
               <i className='fab fa-github' />
               Thomas
           </a>
-          
           </div>
+          <Link to='/' className='social-logo'>
+              <i className='fas fa-microscope' />
+            </Link>
         </div>
       </section>
     </div>
