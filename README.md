@@ -1,6 +1,6 @@
-<h1 align="center">Welcome to GameDex 👋</h1>
+<h1 align="center" class="fas fa-microscope">Welcome to GameDar 🔬</h1>
 <p align="center">
-  <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
+  <img alt="Version" src="https://img.shields.io/badge/version-2.0.0-blue.svg?cacheSeconds=2592000" />
   <a href="https://github.com/ParkerM2/GamesList#readme" target="_blank">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
   </a>
@@ -20,7 +20,7 @@ As a video game user, I want to be able to look up and save my played games to a
 Once a user is registered and verified, our website assigns a pokemon to each individual user, and is then allowed to search a database of games to pick what they want to add to their personal game list. Each game searched contains information such as: game title, platform, year released, and Metacritic review scores.
 
 ---
-## Installion
+## Installation
 
 
 npm install
