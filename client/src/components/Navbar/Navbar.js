@@ -58,7 +58,7 @@ function Navbar({ loggedIn }){
                         </Link>
                     </li>
                     <li className="nav-item">
-                        <Link to="/sign-up" className="nav-links" onClick={closeMobileMenu}>
+                        <Link to="/login" className="nav-links" onClick={closeMobileMenu}>
                             Sign In
                         </Link>
                     </li>
