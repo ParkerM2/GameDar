@@ -35,7 +35,9 @@ Once a user is registered and verified, our website (for fun :o) assigns a pokem
 ---
 
 ## Techonologies Used
-
+![](client/public/images/react.png)
+![](client/public/images/MySQL-logo.png)
+![](client/public/images/node-js-logo.png)
 
 ---
 ## Installation
@@ -46,8 +48,8 @@ npm install
 ---
 ## Usage
 
-
-npm run start
+To be able to start the application:
+type `npm start`
 
 ---
 ## 👨‍👨‍👦‍👦 Contributing
@@ -58,6 +60,14 @@ npm run start
 ## Like the App?
 
 Give a 👍🏻 if you would use this application!
+
+<h2>Checkout our Linkedins:</h2>
+
+ 🤠 [Chambers Mansour](https://www.linkedin.com/in/chambers-mansour/)
+
+ 😀 [Parker Manning](https://www.linkedin.com/in/parkerm2/)
+
+😁 [Matthew Althoff](https://www.linkedin.com/in/thomasalthoff/)
 
 
 
