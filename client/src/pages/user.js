@@ -6,6 +6,9 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
 import Jumbotron from "react-bootstrap/Jumbotron";
+import Wishlist from "../components/Wishlist/Wishlist"
+import Carousel from "../components/ElasticCarousel/ECarousel"
+import "./User.css"
 
 
 function UserPage ({ fetcher }) {
@@ -28,13 +31,20 @@ function UserPage ({ fetcher }) {
                 </Col>
             {/* Inputting Column for news from api call */}
                 <Col>
-                    <Jumbotron className="mt-3"> 
-                       {/* insert API INFO */}
-                        <h1>API INFO HERE</h1>
+                    <Jumbotron className="jumbotronUser mt-4"> 
+                       <Carousel/>
+                        
 
                     </Jumbotron>
                 </Col>
-            </Row>       
+            </Row>    
+
+         <Row>
+             
+         <Wishlist/>
+             
+             
+             </Row>   
         </Container>
         
         
