@@ -1,10 +1,15 @@
 import React, { useState } from 'react'
 import DashboardPage from '../components/Dashboard/Dashboard';
+import Wishlist from "./Wishlist"
 
-function Dashboad() {
+function Dashboard() {
     return (
+        <>
        <DashboardPage />
+       <Wishlist/>
+       </>
+
     )
 }
 
-export default Dashboad
+export default Dashboard
