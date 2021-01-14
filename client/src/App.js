@@ -9,6 +9,7 @@ import Favorites from "./pages/favorites"
 import Register from "./pages/Register"
 import Login from "./pages/Login"
 import WishListPage from "./pages/Wishlist"
+import SearchPage from "./pages/Search"
 
 function App() {
   const [token, setToken] = useState(null)
@@ -30,6 +31,9 @@ function App() {
           </Route>
           <Route path="/MyList" exact>
             <WishListPage fetcher={authenticatedFetch}/>
+          </Route>
+          <Route path="/Search" exact>
+            <SearchPage fetcher={authenticatedFetch}/>
           </Route>
           <Route path="/register" exact>
             <Register onSuccess={(token) => setToken(token)}/> 

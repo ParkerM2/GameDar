@@ -14,9 +14,8 @@ const router = express.Router();
 
 router.post("/api/login", [
     check("email").notEmpty(),
-    check("password").notEmpty()
+    check("user_password").notEmpty()
 ], async (req, res) => {
-    console.log(req.body)
     let errors = validationResult(req);
 
     if (!errors.isEmpty()) {
@@ -24,7 +23,7 @@ router.post("/api/login", [
     }
 
     try {
-        let userId = await loginService.handleLogin(req.body.email, req.body.password)
+        let userId = await loginService.handleLogin(req.body.email, req.body.user_password)
         let token = jwt.sign({ userId }, "secret")
         return res.json({ token })
     } catch (err) {
@@ -34,10 +33,9 @@ router.post("/api/login", [
 
 router.post("/api/register", [
     check("email").notEmpty(),
-    check("password", "Invalid password. Password must be at least 2 chars long").isLength({ min: 2 }),
+    check("user_password", "Invalid password. Password must be at least 2 chars long").isLength({ min: 2 }),
     check("passwordConfirmation", "Password confirmation does not match password").custom((value, { req }) => {
-        console.log(req.body.password)
-        return value === req.body.password
+        return value === req.body.user_password
     })
 ], async (req, res) => {
     let errors = validationResult(req);
@@ -50,7 +48,7 @@ router.post("/api/register", [
     let newUser = {
         email: req.body.email,
         user_name: req.body.user_name,
-        user_password: req.body.password,
+        user_password: req.body.user_password,
         user_pokemon: null,
         //user_game_list: null,
     };

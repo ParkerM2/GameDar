@@ -19,6 +19,7 @@ const { searchPageRender } = require('./routes/searchpage');
 const renderWishList = require('./routes/wishlist');
 const homePage = require('./controllers/home-page');
 const apiUserRoutes = require('./routes/api/user')
+const apiSearchRoutes = require('./routes/api/search')
 require('./passport-config')
 
 const app = express();
@@ -59,6 +60,7 @@ app.use(passport.session());
 
 // init all web routes
 app.use(apiUserRoutes)
+app.use(apiSearchRoutes)
 initWebRoutes(app);
 homePage.handleHelloWorld(app);
 userPageRoutes.userPageRender(app);

@@ -1,7 +1,6 @@
 import React from "react";
 import useSWR from "swr";
 import "../App.css"
-import Footer from "../components/Footer/Footer"
 import SearchCheapGames from "../components/SearchShark/Search"
 import Wishlist from "../components/Wishlist/Wishlist";
 
@@ -14,7 +13,6 @@ function WishListPage({ fetcher }){
         <Wishlist/>
         <pre>{JSON.stringify(error || data)}</pre>
         <SearchCheapGames/>
-        <Footer/>
 </>
     )
 }

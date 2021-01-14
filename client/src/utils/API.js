@@ -6,6 +6,12 @@ export default{
         return axios.get("https://www.cheapshark.com/api/1.0/games?title=" + game)
     },
 
+    getSearchRawG:  function(q, token){
+        return axios.get("/api/search?q=" + q, {
+            headers: { Authorization: `Bearer ${token}`}
+        })
+    },
+
     getBooks: function(){
         return axios.get('/api/games');
     },
