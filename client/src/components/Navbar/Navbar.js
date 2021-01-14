@@ -1,4 +1,5 @@
 import React,{useEffect, useState} from 'react'
+
 import {Link, withRouter} from "react-router-dom"
 import Button from "react-bootstrap/Button"
 import Form from 'react-bootstrap/Form'
@@ -66,12 +67,6 @@ function Navbar({ loggedIn, ...props }){
 </div>
                     </>
                  
-
-
-
-
-                {/* links */}
-                
                 <ul className= {click ? "nav-menu active": "nav-menu"}>
                     <li className="nav-item">
                         <Link to="/" className="nav-links" onClick={closeMobileMenu}>
@@ -79,20 +74,21 @@ function Navbar({ loggedIn, ...props }){
                         </Link>
                     </li>
                     <li className="nav-item">
-                        <Link to="/Favorites" className="nav-links" onClick={closeMobileMenu}>
-                            Favorites
+                        <Link to="/user" className="nav-links" onClick={closeMobileMenu}>
+                            User Page
                         </Link>
                     </li>
                     <li className="nav-item">
                         <Link to="/myList" className="nav-links" onClick={closeMobileMenu}>
-                            MyList 
+                            Search
                         </Link>
                     </li>
                     <li className="nav-item">
-                        <Link to="/sign-up" className="nav-links" onClick={closeMobileMenu}>
+                        <Link to="/login" className="nav-links" onClick={closeMobileMenu}>
                             Sign In
                         </Link>
                     </li>
+                   
                 </ul>
               
         </div>

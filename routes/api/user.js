@@ -23,7 +23,7 @@ router.post("/api/login", [
     let errors = validationResult(req);
 
     if (!errors.isEmpty()) {
-        return res.json({ errors: errors.mapped() })
+        return res.status(400).json({ errors: errors.mapped() })
     }
 
     try {
@@ -45,7 +45,7 @@ router.post("/api/register", [
     let errors = validationResult(req);
 
     if (!errors.isEmpty()) {
-        return res.json({ errors: errors.mapped() })
+        return res.status(400).json({ errors: errors.mapped() })
     }
 
     //create a new user
@@ -54,7 +54,6 @@ router.post("/api/register", [
         user_name: req.body.user_name,
         user_password: req.body.user_password,
         user_pokemon: null,
-        //user_game_list: null,
     };
 
     try {

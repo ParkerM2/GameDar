@@ -26,9 +26,9 @@ props.games.map(game=>{
     <Card.Text>
       {game.author}
     </Card.Text>
-    <Card.Text>
+    <Card.Title>
       {game.description}
-    </Card.Text>
+    </Card.Title>
     <Button className="saveBook btn btn-primary" 
     id={game.id} onClick={(event) => props.handleSavedButton(event)} 
     variant="success">Product Page</Button>
