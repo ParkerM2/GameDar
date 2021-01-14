@@ -1,6 +1,6 @@
 const axios = require('axios');
-const loginController = require('../controllers/login-controller')
-const userService = require('../services/user-service');
+const loginController = require('../../controllers/login-controller')
+const userService = require('../../services/user-service');
 let searchPageRender = async function (app, title) {
 
 app.get("/search", loginController.checkLoggedIn, async function (req, res) {

@@ -2,18 +2,25 @@ import React from 'react';
 import './footer.css';
 import { Button } from '../Navbar/Button';
 import { Link } from 'react-router-dom';
+import Moment from 'react-moment';
+import 'moment-timezone';
+
+
 
 function Footer() {
+  var dateToFormat= new Date('Mon Jan 12 00:00:00 GMT 2015');
+  // Moment(dateToFormat)
+  // dateToFormat.format('YYYY-MM-DD HH:mm');
+
+
+
+
   return (
+    
     <div className='footer-container'>
           <div className='footer-links'>
         <div className='footer-link-wrapper'>
-          <div className='footer-link-items'>
-            <Link to='/login'>Login</Link>
-            <Link to='/register'>SignUp</Link>
-            <Link to='/MyList'>Wishlist</Link>
-            <Link to='/'>Support</Link>
-          </div>
+      
         </div>
       </div>
     
@@ -24,50 +31,67 @@ function Footer() {
             <Link to='/' className='social-logo'>
               <i className='fas fa-microscope' />
             </Link>
-          </div>
-          <small className='website-rights'> © 2020</small>
+      </div>
+        
           <div className='social-icons'>
-            <Link
-              className='social-icon-link facebook'
-              to='/'
-              target='_blank'
-              aria-label='Facebook'
-            >
-              <i className='fab fa-facebook-f' />
-            </Link>
-            <Link
-              className='social-icon-link instagram'
-              to='/'
-              target='_blank'
-              aria-label='Instagram'
-            >
-              <i className='fab fa-instagram' />
-            </Link>
-            <Link
-              className='social-icon-link youtube'
-              to='/'
-              target='_blank'
-              aria-label='Youtube'
-            >
-              <i className='fab fa-youtube' />
-            </Link>
-            <Link
-              className='social-icon-link twitter'
-              to='/'
-              target='_blank'
-              aria-label='Twitter'
-            >
-              <i className='fab fa-twitter' />
-            </Link>
-            <Link
-              className='social-icon-link twitter'
-              to='/'
-              target='_blank'
-              aria-label='LinkedIn'
-            >
-              <i className='fab fa-linkedin' />
-            </Link>
+            <a className ="social-icon-link" href='/login'>Login</a>
+            
+            <a className ="social-icon-link"  href='/register'>Sign Up</a>
+            
+            <a className ="social-icon-link"  href='/MyList'>Search</a>
+            
+            <a className ="social-icon-link"  href='/user'>User Page</a>
+          
           </div>
+          
+         
+          <p className='website-rights'>
+          <Moment component={dateToFormat} /> 
+          </p>
+
+          <div className='social-icons'>
+
+            <a 
+                className ="social-icon-link twitter"
+                href="https://github.com/ParkerM2"
+                target= '_blank'
+                aria-label
+              a> 
+              <i className='fab fa-github' />
+              Parker
+              </a> 
+              <a 
+                className ="social-icon-link twitter"
+                href="https://github.com/condeemilio891"
+                target= '_blank'
+                aria-label
+              a> 
+              <i className='fab fa-github' />
+              Emilio
+              </a> 
+            
+              <a 
+                className ="social-icon-link twitter"
+                href="https://github.com/ChambersM97"
+                target= '_blank'
+                aria-label
+              a> 
+              <i className='fab fa-github' />
+              Chambers
+              </a> 
+              <a 
+                className ="social-icon-link twitter"
+                href="https://github.com/tmalthoff"
+                target= '_blank'
+                aria-label
+              a> 
+              <i className='fab fa-github' />
+              Thomas
+          </a>
+          </div>
+          <Link to='/' className='social-logo'>
+              <i className='fas fa-microscope' />
+            </Link>
         </div>
       </section>
     </div>

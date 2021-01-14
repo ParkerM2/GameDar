@@ -16,6 +16,7 @@ function Login({ onSuccess, ...props }) {
 
         console.log("loginResponse", body)
         if (response.ok) {
+            <Link exact-path ="/"/>
             // handle login success
             saveToken(body.token);
             setErrors(null)

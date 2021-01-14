@@ -8,18 +8,20 @@ function HeroSection (){
         
             <h1>Welcome to Game-Dar</h1>
             <p>Keep Track of all your Games</p>
+            {/* <video src='/videos/' autoPlay loop muted /> */}
             <div className="hero-btns">
                 <Button 
                 className="btns" 
                 buttonStyle="btn--outline"
                 buttonSize='btn--large'>
-                    Get Started
+                    Get Started <i class="fas fa-user-tie"></i>
+
                 </Button>
                 <Button 
                 className="btns" 
                 buttonStyle="primary"
                 buttonSize='btn--large'>
-                    Watch trailer <i className= 'far fa-play-circle'></i>
+                    Sign In <i className= 'fa fa-sign-in'></i>
                 </Button>
             </div>
             

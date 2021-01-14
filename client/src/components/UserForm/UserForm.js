@@ -5,7 +5,8 @@ function UserForm({ login, errors, onSubmit }) {
     const handleSubmit = (event) => {
         event.preventDefault()
         if (typeof onSubmit === 'function') {
-            onSubmit(new FormData(event.target))    
+            onSubmit(new FormData(event.target))
+             
         }
     }
 
