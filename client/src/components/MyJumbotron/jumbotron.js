@@ -4,6 +4,7 @@ import Container from 'react-bootstrap/Container'
 import "./jumbotron.css"
 import Image from "react-bootstrap/Image"
 import SharkIcon from "../../assets/cheapSharkIcon.jpg"
+import Carousel from "../ElasticCarousel/ECarousel"
 
 const MyJumbotron= (props)=>{
     return(
@@ -14,7 +15,9 @@ const MyJumbotron= (props)=>{
       {props.text}
     </p>
     <Image src={SharkIcon}roundedCircle className="h-1 w-1 k mr-100" />
+    <Carousel/>
   </Container>
+
 </Jumbotron>
     );
 };

@@ -47,25 +47,7 @@ function Navbar({ loggedIn, ...props }){
 
                     
 
-                    <> 
-                    <div>
-  
-  <InputGroup className="mb-3">
-    <FormControl
-      placeholder="Search"
-      aria-label="Recipient's username"
-      aria-describedby="basic-addon2"
-      value={searchTerm}
-      onChange={e=>setSearchTerm(e.target.value)}
-
-    />
-    <InputGroup.Append>
-      <Button variant="outline-secondary" onClick={()=>props.history.push(`/Search?q=${searchTerm}`, {search: true})}>Search</Button>
-    </InputGroup.Append>
-  </InputGroup>
-
-</div>
-                    </>
+                    
                  
                 <ul className= {click ? "nav-menu active": "nav-menu"}>
                     <li className="nav-item">
@@ -74,12 +56,12 @@ function Navbar({ loggedIn, ...props }){
                         </Link>
                     </li>
                     <li className="nav-item">
-                        <Link to="/user" className="nav-links" onClick={closeMobileMenu}>
+                        <Link to="/dashboard" className="nav-links" onClick={closeMobileMenu}>
                             User Page
                         </Link>
                     </li>
                     <li className="nav-item">
-                        <Link to="/myList" className="nav-links" onClick={closeMobileMenu}>
+                        <Link to="/Search" className="nav-links" onClick={closeMobileMenu}>
                             Search
                         </Link>
                     </li>

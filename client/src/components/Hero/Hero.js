@@ -17,12 +17,7 @@ function HeroSection (){
                     Get Started <i class="fas fa-user-tie"></i>
 
                 </Button>
-                <Button 
-                className="btns" 
-                buttonStyle="primary"
-                buttonSize='btn--large'>
-                    Sign In <i className= 'fa fa-sign-in'></i>
-                </Button>
+              
             </div>
             
         </div>
