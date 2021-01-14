@@ -1,12 +1,17 @@
 import React, { useState } from 'react'
+import { withRouter } from 'react-router-dom';
 import UserForm from '../components/UserForm/UserForm'
 
-function Register({ onSuccess }) {
-    const [errors, setErrors] = useState(null)
+function Register({ onSuccess, ...props }) {
+    const [errors, setErrors] = useState(null);
+
+    const saveToken = (token) =>{
+        localStorage.setItem('USER_TOKEN', token);
+    }
 
     const handleSubmit = async (formData) => {
         const payload = new URLSearchParams(formData.entries())
-        const response = await fetch("/user/api/register", { method: "POST", body: payload})
+        const response = await fetch("/api/register", { method: "POST", body: payload})
         const body = await response.json()
 
         console.log("registerResponse", body)
@@ -14,6 +19,9 @@ function Register({ onSuccess }) {
             // handle register success
             setErrors(null)
             onSuccess(body.token)
+            saveToken(body.token);
+            alert('Signup successful!');
+            props.history.push('/')
         } else {
             // handle register error
             setErrors(body.errors)
@@ -41,4 +49,4 @@ function Register({ onSuccess }) {
     )
 }
 
-export default Register
+export default withRouter(Register);
