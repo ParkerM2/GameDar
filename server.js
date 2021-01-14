@@ -9,19 +9,15 @@ const passport = require('passport');
 const exphbs = require('express-handlebars');
 const session = require('express-session');
 const connectFlash = require('connect-flash');
-// const initWebRoutes = require('./routes/user');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const path = require('path');
-const userPageRoutes = require('./routes/userpage-routes');
-const { searchPageRender } = require('./routes/searchpage');
-const renderWishList = require('./routes/wishlist');
 const homePage = require('./controllers/home-page');
 const apiUserRoutes = require('./routes/api/user')
 require('./passport-config')
 const app = express();
 
-// app.use(morgan('tiny'));
+ app.use(morgan('tiny'));
 
 //use cookie parser
 app.use(cookieParser('secret'));
@@ -41,7 +37,7 @@ app.use(session({
 // Enable body parser post data
 app.use(bodyParser.json());
 
-// app.use(bodyParser.urlencoded({ extended: true }));
+ app.use(bodyParser.urlencoded({ extended: true }));
 
 //Enable flash message
 app.use(connectFlash());
@@ -53,11 +49,7 @@ app.use(passport.session());
 // init all web routes
 
 app.use(apiUserRoutes)
-initWebRoutes(app);
 homePage.handleHelloWorld(app);
-userPageRoutes.userPageRender(app);
-searchPageRender(app);
-renderWishList.wishListRenderPage(app);
 
 
 

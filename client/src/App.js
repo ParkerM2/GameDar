@@ -10,6 +10,8 @@ import Register from "./pages/Register"
 import Login from "./pages/Login"
 import WishListPage from "./pages/Wishlist"
 import SearchPage from "./pages/Search"
+import DashboardPage from "./pages/Dashboard"
+
 function App() {
   const [token, setToken] = useState(null)
 
@@ -24,9 +26,9 @@ function App() {
         <Switch>
           <Route path="/" exact>
             <Home />
-          </Route>
-          <Route path="/user" exact>
-            <UserPage fetcher={authenticatedFetch}/>
+          </Route> 
+          <Route path="/Dashboard" exact>
+            <DashboardPage/>
           </Route>
           <Route path="/Search" exact>
             <SearchPage fetcher={authenticatedFetch}/>
@@ -35,10 +37,7 @@ function App() {
             <Register onSuccess={(token) => setToken(token)}/> 
           </Route>
           <Route path="/login" exact>
-            <SignIn onSuccess={(token) => setToken(token)}/>
-          </Route>
-          <Route path="/register" exact>
-            <Register onSuccess={(token) => setToken(token)}/>
+            <Login onSuccess={(token) => setToken(token)}/>
           </Route>
         </Switch>
         <Footer />

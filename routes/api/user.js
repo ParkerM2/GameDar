@@ -20,6 +20,7 @@ router.post("/api/login", [
     check("email").notEmpty(),
     check("user_password").notEmpty()
 ], async (req, res) => {
+    console.log("REQ BODY", req.body);
     let errors = validationResult(req);
 
     if (!errors.isEmpty()) {
