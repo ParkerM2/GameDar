@@ -6,13 +6,13 @@ if (process.env.NODE_ENV !== 'production') {
 const express = require("express");
 const morgan = require("morgan");
 const passport = require('passport');
-const exphbs = require('express-handlebars');
+//const exphbs = require('express-handlebars');
 const session = require('express-session');
 const connectFlash = require('connect-flash');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const path = require('path');
-const homePage = require('./controllers/home-page');
+//const homePage = require('./controllers/home-page');
 const apiUserRoutes = require('./routes/api/user')
 require('./passport-config')
 const app = express();
@@ -49,7 +49,7 @@ app.use(passport.session());
 // init all web routes
 
 app.use(apiUserRoutes)
-homePage.handleHelloWorld(app);
+//homePage.handleHelloWorld(app);
 
 
 
@@ -57,7 +57,7 @@ let port = process.env.PORT || 8080
 
 if(process.env.NODE_ENV === 'production') {
   app.use(express.static(path.resolve(__dirname + '/client/build')));
-  
+
   app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname + '/client/build/index.html'));
   });
