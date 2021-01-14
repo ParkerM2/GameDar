@@ -12,6 +12,24 @@ export default{
         })
     },
 
+    addGame: function(data, token){
+        return axios.post("/api/addGame", data, {
+            headers: { Authorization: `Bearer ${token}`},  
+        })
+    },
+
+    removeGame: function(gameId, token){
+        return axios.delete("/api/removeGame/"+gameId, {
+            headers: { Authorization: `Bearer ${token}`},  
+        })
+    },
+
+    getGameDetails:  function(gameId, token){
+        return axios.get("/api/gameDetails?id=" + gameId, {
+            headers: { Authorization: `Bearer ${token}`}
+        })
+    },
+
     getBooks: function(){
         return axios.get('/api/games');
     },

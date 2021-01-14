@@ -9,16 +9,54 @@ const Search = (props)=>{
     }
     const userToken = localStorage.getItem('USER_TOKEN');
 
+    const [isLoading, setIsLoading] = useState(true);
     const [searchResults, setSearchResults] = useState([]);
+    const [gameDetails, setGameDetails] = useState(null);
 
     useEffect(()=>{
     API.getSearchRawG(searchTerm, userToken).then(res=>{
-       
+      //  console.log("SEARCH RES", res.data.data.results);
        setSearchResults(res.data.data.results)
     }).catch(err=>{
         console.log("SEARCH ERROR", err);
     })
-    }, [searchTerm])
+    }, [searchTerm]);
+
+    const getGameDetails = (gameId) =>{
+        API.getGameDetails(gameId, userToken).then((res)=>{
+            console.log("GAME DETAILS==>", res.data);
+            setGameDetails(res.data.data)
+        }).catch(err=>{
+            console.log("GETTING GAME ERROR", err);
+        })
+
+    }
+
+    const addGame =(game)=>{
+        const gameToAdd = {
+            id: game.id,
+            title: game.name,
+            game_img: game.background_image
+        };
+        API.addGame(gameToAdd, userToken)
+            .then(()=>{
+                alert('Game Added Successfully!');
+                getGameDetails(game.id)
+                setIsLoading(!isLoading)
+            })
+            .catch(e=>alert('Something went wrong while adding the game!'))
+
+    }
+
+    const removeGame = (gameId)=>{
+        API.removeGame(gameId, userToken)
+            .then(()=>{
+                console.log("Game Removed");
+                getGameDetails(gameId)
+            })
+            .catch(()=>alert("Error removing game!"))
+
+    }
     return (
         <div className="container">
                 <h1>Search Results</h1>
@@ -29,9 +67,9 @@ const Search = (props)=>{
                     {
                         searchResults.length > 0 ?
                         (
-                            searchResults.map(el=>(
-                                <li class="list-group-item" key={el.id}>
-                                <a href="#" >{el.name}</a>
+                            searchResults.map(game=>(
+                                <li class="list-group-item" key={game.id}>
+                                <a onClick={()=>getGameDetails(game.id)} style={{textDecoration: 'none', cursor: 'pointer'}} >{game.name}</a>
                                 </li>
                             ))
                         ) : (
@@ -42,9 +80,20 @@ const Search = (props)=>{
                     </ul>
                 </div>
                 <div class="col-7 offset-lg-1" id="game_details">
-                    <img src="" alt="" />
-                    <p style={{color: '#fff'}}>Nostrud tempor laborum enim nisi. Ut et id magna fugiat. Laborum nisi aliqua amet esse in ea. Quis sit commodo incididunt qui quis ipsum Lorem nostrud reprehenderit culpa et minim velit. Amet esse est minim nisi elit reprehenderit veniam pariatur dolor adipisicing fugiat eiusmod.</p>
-                    <button className="btn btn-primary">Add</button>
+                    {
+                       gameDetails && (
+                           <div>
+                        <img src={gameDetails.background_image} alt={gameDetails.name} style={{width: '100%'}} />
+                        <hr />
+                        <div dangerouslySetInnerHTML={{__html: gameDetails.description }} style={{color: '#fff'}}/>
+                        {gameDetails.hasGame ?
+                         <button className="btn btn-danger" onClick={()=>removeGame(gameDetails.id)}>Remove</button> :
+                         <button className="btn btn-primary" onClick={()=>addGame(gameDetails)}>Add</button>
+                        }
+                        </div>
+                       )
+                    }
+                  
                 </div>
         </div>
     </div>
