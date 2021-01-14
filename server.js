@@ -13,8 +13,13 @@ const connectFlash = require('connect-flash');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const path = require('path');
-
-const apiRoutes = require('./routes');
+const userPageRoutes = require('./routes/userpage-routes');
+const { searchPageRender } = require('./routes/searchpage');
+const renderWishList = require('./routes/wishlist');
+const homePage = require('./controllers/home-page');
+const apiUserRoutes = require('./routes/api/user')
+const apiSearchRoutes = require('./routes/api/search')
+require('./passport-config')
 const app = express();
 
 // app.use(morgan('tiny'));
@@ -47,7 +52,15 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // init all web routes
-app.use(apiRoutes);
+
+app.use(apiUserRoutes)
+app.use(apiSearchRoutes)
+initWebRoutes(app);
+homePage.handleHelloWorld(app);
+userPageRoutes.userPageRender(app);
+searchPageRender(app);
+renderWishList.wishListRenderPage(app);
+
 
 
 let port = process.env.PORT || 8080

@@ -19,7 +19,7 @@ function UserForm({ login, errors, onSubmit }) {
                 { login || (
                     <div className="form-group">
                         <label htmlFor="userName">Full name:</label>
-                        <input type="text" className="form-control" name="userName" id="userName" placeholder="Full name" />
+                        <input type="text" className="form-control" name="user_name" id="userName" placeholder="Full name" />
                     </div>
                 )}
                 
@@ -30,7 +30,7 @@ function UserForm({ login, errors, onSubmit }) {
 
                 <div className="form-group">
                     <label htmlFor="password">Password: (*)</label>
-                    <input type="password" name="password" className="form-control" id="password" placeholder="Password" required />
+                    <input type="password" name="user_password" className="form-control" id="password" placeholder="Password" required />
                 </div>
 
                 { login || (

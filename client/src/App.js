@@ -5,10 +5,11 @@ import {BrowserRouter as Router,Switch,Route} from
 import Navbar from "./components/Navbar/Navbar"
 import Footer from "./components/Footer/Footer"
 import Home from "./pages/home"
-import SignIn from "./pages/Login"
-import Search from "./pages/Wishlist"
-import UserPage from "./pages/user";
-import Register from "./pages/registration";
+import Favorites from "./pages/favorites"
+import Register from "./pages/Register"
+import Login from "./pages/Login"
+import WishListPage from "./pages/Wishlist"
+import SearchPage from "./pages/Search"
 function App() {
   const [token, setToken] = useState(null)
 
@@ -27,8 +28,11 @@ function App() {
           <Route path="/user" exact>
             <UserPage fetcher={authenticatedFetch}/>
           </Route>
-          <Route path="/myList" exact>
-            <Search onSuccess={(token) => setToken(token)}/> 
+          <Route path="/Search" exact>
+            <SearchPage fetcher={authenticatedFetch}/>
+          </Route>
+          <Route path="/register" exact>
+            <Register onSuccess={(token) => setToken(token)}/> 
           </Route>
           <Route path="/login" exact>
             <SignIn onSuccess={(token) => setToken(token)}/>

@@ -1,9 +1,13 @@
 import React, { useState } from 'react'
 import UserForm from '../components/UserForm/UserForm'
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
-function Login({ onSuccess }) {
-    const [errors, setErrors] = useState(null)
+function Login({ onSuccess, ...props }) {
+    const [errors, setErrors] = useState(null);
+
+    const saveToken = (token) =>{
+        localStorage.setItem('USER_TOKEN', token);
+    }
 
     const handleSubmit = async (formData) => {
         const payload = new URLSearchParams(formData.entries())
@@ -14,8 +18,10 @@ function Login({ onSuccess }) {
         if (response.ok) {
             <Link exact-path ="/"/>
             // handle login success
+            saveToken(body.token);
             setErrors(null)
             onSuccess(body.token)
+            props.history.push('/MyList');
         } else {
             // handle login error
             setErrors(body.errors)
@@ -30,7 +36,7 @@ function Login({ onSuccess }) {
 
                     <hr/>
                     <div>
-                        If you haven't had an account. <Link to="/register">Create a new account</Link>.
+                        If you haven't created an account. <Link to="/register">Create a new account</Link>.
                     </div>
                     <div>
                         Return to <Link to="/">Home Page</Link>
@@ -41,4 +47,4 @@ function Login({ onSuccess }) {
     )
 }
 
-export default Login
+export default withRouter(Login)

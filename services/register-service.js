@@ -9,7 +9,7 @@ var axios = require('axios');
 // and pushing all this info to the msql db, while checking to make sure the email
 // hasn't already been used 
 let createNewUser = (data) => {
-    // console.log(data," in createNewUser")
+    console.log(data," in createNewUser")
     return new Promise(async (resolve, reject) => {
         // check email is exist or not
         let isEmailExist = await checkExistEmail(data.email);
@@ -42,6 +42,7 @@ let createNewUser = (data) => {
                 ' INSERT INTO users set ? ', user,
                 function(err, result) {
                     if (err) {
+                        console.log("ERROR CREATING USER==>", err);
                         return reject("Create user failed")
                     }
                     console.log("Create a new user success!", result)

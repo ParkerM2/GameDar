@@ -1,14 +1,16 @@
 import React,{useEffect, useState} from 'react'
-import {Link} from "react-router-dom"
-// import Button from "react-bootstrap/Button"
-// import Form from 'react-bootstrap/Form'
-// import FormControl from "react-bootstrap/FormControl"
-// import InputGroup from 'react-bootstrap/InputGroup'
+
+import {Link, withRouter} from "react-router-dom"
+import Button from "react-bootstrap/Button"
+import Form from 'react-bootstrap/Form'
+import FormControl from "react-bootstrap/FormControl"
+import InputGroup from 'react-bootstrap/InputGroup'
 import "./NavBar.css"
 
-function Navbar({ loggedIn }){
+function Navbar({ loggedIn, ...props }){
     const [click,setClick]= useState (false);
     const [button,setButton]=useState(true)
+    const [searchTerm, setSearchTerm]=useState('');
 
     const handleClick=()=>
         setClick(!click);
@@ -40,7 +42,31 @@ function Navbar({ loggedIn }){
                     <i className={click ? "fas fa-times" :"fas fa-bars"}/>
                     
                 </div>
-               
+            
+{/* serach bar */}
+
+                    
+
+                    <> 
+                    <div>
+  
+  <InputGroup className="mb-3">
+    <FormControl
+      placeholder="Search"
+      aria-label="Recipient's username"
+      aria-describedby="basic-addon2"
+      value={searchTerm}
+      onChange={e=>setSearchTerm(e.target.value)}
+
+    />
+    <InputGroup.Append>
+      <Button variant="outline-secondary" onClick={()=>props.history.push(`/Search?q=${searchTerm}`, {search: true})}>Search</Button>
+    </InputGroup.Append>
+  </InputGroup>
+
+</div>
+                    </>
+                 
                 <ul className= {click ? "nav-menu active": "nav-menu"}>
                     <li className="nav-item">
                         <Link to="/" className="nav-links" onClick={closeMobileMenu}>
@@ -72,4 +98,4 @@ function Navbar({ loggedIn }){
          </>
     )
 }
-export default Navbar
+export default withRouter(Navbar);
