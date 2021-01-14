@@ -65,7 +65,7 @@ let checkExistEmail = (email) => {
                     if (err) {
                         reject(err)
                     }
-                    if (rows.length > 0) {
+                    if (rows?.length > 0) {
                         resolve(true)
                     } else {
                         resolve(false)
