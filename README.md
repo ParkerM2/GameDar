@@ -7,7 +7,7 @@
 
 </p>
 
-##[Click here to run the application!](https://thisismytestdeployment.herokuapp.com/)
+## [Click here to run the application!](https://thisismytestdeployment.herokuapp.com/)
 
 ![Test Image 3](client/public/images/homepage.PNG)
 
