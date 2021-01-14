@@ -7,6 +7,8 @@
 
 </p>
 
+##[Click here to run the application!](https://thisismytestdeployment.herokuapp.com/)
+
 ![Test Image 3](client/public/images/homepage.PNG)
 
 ### 🏠 [Our Project Homepage](https://github.com/ParkerM2/Project-3)
