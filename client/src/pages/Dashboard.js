@@ -6,7 +6,6 @@ function Dashboard() {
     return (
         <>
        <DashboardPage />
-       <Wishlist/>
        </>
 
     )

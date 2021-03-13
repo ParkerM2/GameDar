@@ -27,9 +27,6 @@ function App() {
           <Route path="/" exact>
             <Home />
           </Route> 
-          <Route path="/Dashboard" exact>
-            <DashboardPage/>
-          </Route>
           <Route path="/Search" exact>
             <SearchPage fetcher={authenticatedFetch}/>
           </Route>

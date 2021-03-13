@@ -36,9 +36,7 @@ const Dashboard = (props)=>{
                                 <a onClick={()=>getGameDetails(game.id)} style={{textDecoration: 'none', cursor: 'pointer'}} >{game.name}</a>
                                 </li>
                             ))
-                        ) : (
-                            <h2 style={{color: 'red'}}>Opps! No Results Found!</h2>
-                        )
+                        ) : (null)
                     }
                 
                     </ul>

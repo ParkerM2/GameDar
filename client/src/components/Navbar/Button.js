@@ -7,7 +7,7 @@ const SIZES =['btn--medium','btn--large']
 
 
 export const Button=({children,type,onClick,buttonStyle,buttonSize})=>{
-    // if not true set it to the first in the stlyes array
+    // if not true set it to the first in the styles array
     const checkButtonStyle=STYLES.includes(buttonStyle)
     ? buttonStyle: 
     STYLES[0];

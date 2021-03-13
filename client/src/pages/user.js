@@ -8,7 +8,7 @@ import Container from "react-bootstrap/Container";
 import Jumbotron from "react-bootstrap/Jumbotron";
 import Wishlist from "../components/Wishlist/Wishlist"
 import Carousel from "../components/ElasticCarousel/ECarousel"
-import "./User.css"
+
 
 
 function UserPage ({ fetcher }) {

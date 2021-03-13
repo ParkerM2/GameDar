@@ -56,11 +56,6 @@ function Navbar({ loggedIn, ...props }){
                         </Link>
                     </li>
                     <li className="nav-item">
-                        <Link to="/dashboard" className="nav-links" onClick={closeMobileMenu}>
-                            User Page
-                        </Link>
-                    </li>
-                    <li className="nav-item">
                         <Link to="/Search" className="nav-links" onClick={closeMobileMenu}>
                             Search
                         </Link>
